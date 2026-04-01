@@ -3,11 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Technical Club</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f4f4f4;
+        }
+
+        /* Navbar */
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #2c0662;
+            color: white;
+            padding: 10px;
+        }
+
+        nav img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        nav h1{
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li{
+            margin: 0 15px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover{
+            color: #ffcc00;
+        }
+
+        /* Main Section */
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        .content{
+            width: 50%;
+        }
+
+        .content h1{
+            font-size: 40px;
+            color: #2c0662;
+            margin-bottom: 20px;
+        }
+
+        .content p{
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .content button{
+            padding: 10px 20px;
+            background: #2c0662;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content button:hover{
+            background: #5e1352;
+        }
+
+        .image{
+            width: 45%;
+        }
+
+        .image img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px){
+            .container{
+                flex-direction: column;
+            }
+
+            .content, .image{
+                width: 100%;
+                text-align: center;
+            }
+
+            .content h1{
+                font-size: 30px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1>Student Club</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, nobis?</p>
-    
+
+    <nav>
+        <img src="https://cdn2.f-cdn.com/contestentries/1743995/29500885/5e864644a79ea_thumb900.jpg" alt="Logo">
+        <h1>Technical Club</h1>
+        <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <div class="content">
+            <h1>Welcome to Technical Club</h1>
+            <p>We are a community of passionate developers, designers, and innovators. Our goal is to help students and professionals grow their technical skills.</p>
+
+            <p>Join us to learn web development, coding, UI/UX design, and real-world projects. We provide workshops, mentorship, and hands-on experience.</p>
+
+            <button>Join Now</button>
+        </div>
+
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Tech Team">
+        </div>
+    </section>
+
 </body>
 </html>

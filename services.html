@@ -4,44 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+
     <style>
-        body {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            margin: 20px;
-         background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
+
+        body{
+            background: #f4f4f4;
         }
-        p {
-            font-size: 16px;
+
+        /* Navbar */
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #2c0662;
+            color: white;
+            padding: 10px 40px;
+        }
+
+        nav img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        nav h1{
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li{
+            margin: 0 15px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover{
+            color: #ffcc00;
+        }
+
+        /* Page Title */
+        .title{
+            text-align: center;
+            margin: 30px 0;
+            color: #2c0662;
+        }
+
+        /* Services Section */
+        .services{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 40px;
+        }
+
+        .card{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+        }
+
+        .card h2{
+            color: #2c0662;
+            margin-bottom: 10px;
+        }
+
+        .card p{
+            font-size: 15px;
             line-height: 1.5;
         }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }   </style>
+
+        /* Responsive */
+        @media(max-width: 768px){
+            nav{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul{
+                margin-top: 10px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1>Our Services</h1>
-    <p>We offer a wide range of services to meet your needs:</p>
-    <ul>
-        <li>Web Development</li>
-        <li>Mobile App Development</li>
-        <li>Digital Marketing</li>
-        <li>Graphic Design</li>
-        <li>SEO Optimization</li>
-    </ul>
-    <h1>Web Development</h1>
-    <p>Our web development services include building responsive and user-friendly websites using the latest technologies. We specialize in both front-end and back-end development to create seamless online experiences.</p>
-    <h1>Mobile App Development</h1>
-    <p>We develop mobile applications for both iOS and Android platforms. Our team focuses
-    on creating intuitive and engaging apps that meet the specific needs of our clients.</p>
-    <h1>Digital Marketing</h1>
-    <p>Our digital marketing services help businesses increase their online presence and reach their target audience effectively. We offer SEO, social media marketing, email marketing, and more.</p>
-    <h1>Graphic Design</h1> 
-    <p>Our graphic design services include creating visually appealing designs for branding, advertising, and promotional materials. We work closely with our clients to bring their vision to life.</p>
-    <h1>SEO Optimization</h1>
-    <p>Our SEO optimization services help improve your website's visibility on search engines. We use proven strategies to increase organic traffic and enhance your online presence.</p>
+
+    <nav>
+        <img src="https://cdn2.f-cdn.com/contestentries/1743995/29500885/5e864644a79ea_thumb900.jpg" alt="Logo">
+        <h1>Technical Club</h1>
+        <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="title">Our Services</h1>
+
+    <section class="services">
+
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>We build responsive and user-friendly websites using modern technologies. Our focus is on performance and design.</p>
+        </div>
+
+        <div class="card">
+            <h2>Mobile App Development</h2>
+            <p>We create Android and iOS apps with smooth UI and great user experience tailored to client needs.</p>
+        </div>
+
+        <div class="card">
+            <h2>Digital Marketing</h2>
+            <p>Grow your business online with SEO, social media marketing, and targeted campaigns.</p>
+        </div>
+
+        <div class="card">
+            <h2>Graphic Design</h2>
+            <p>Creative and professional designs for branding, posters, and marketing materials.</p>
+        </div>
+
+        <div class="card">
+            <h2>SEO Optimization</h2>
+            <p>Improve your website ranking and visibility with our proven SEO strategies.</p>
+        </div>
+
+    </section>
+
 </body>
 </html>
